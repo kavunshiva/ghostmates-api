@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_secure_password
+
   has_many :orders
   has_many :buyers, through: :buyer_vendors, source: :buyer
   has_many :vendors, through: :vendor_buyers, source: :vendor
